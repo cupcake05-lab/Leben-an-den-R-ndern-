@@ -283,7 +283,7 @@
             </div>
             <div id="grid-suedostasien" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"></div>
         </section>
-// --- VENEZUELA ---
+        // --- VENEZUELA ---
             {
                 room: 'venezuela',
                 src: 'https://placehold.co/800x600/0f172a/ffffff?text=Caracas+Alltag',
@@ -299,7 +299,6 @@
             imageDatabase.forEach((imageData, index) => {
                 const targetGrid = document.getElementById('grid-' + imageData.room);
                 if (targetGrid) {
-                    // Hier erstellen wir den Eintrag: Komplett ohne weiße Boxen/Ränder
                     const element = document.createElement('div');
                     element.className = "flex flex-col cursor-pointer";
                     element.setAttribute('onclick', `openLightbox(${index})`);
@@ -347,4 +346,3 @@
     </script>
 </body>
 </html>
-    
