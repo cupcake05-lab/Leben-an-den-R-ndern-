@@ -283,8 +283,7 @@
             <p id="lightbox-caption" class="text-neutral-400 font-light text-xs mt-1"></p>
         </div>
     </div>
-
-    <script>
+<script>
         function scrollToSection(id) {
             const element = document.getElementById('room-' + id);
             if (element) { element.scrollIntoView({ behavior: 'smooth' }); }
@@ -292,10 +291,7 @@
 
         const imageDatabase = [
             // --- BEREICH I: UKRAINE (15 Bilder) ---
-            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+1', title: Anhelina, Borschtschiwka, Ukraine, 2024, 'UKRAINE BILD 1', caption: `Seit 2012 reiste Florian Bachmeier über dreißigmal in die Ukraine, im März 2026 etwa in das Gebiet von Charkiw. Er dokumentierte 2014 die Annexion der Krim, die Kämpfe im Donbass und seit dem 24. Februar 2022 die Vollinvasion der Ukraine durch Russland. 
-Die folgenden Bilder zeigen das Leben an der Front, wo viele Dörfer nahezu verlassen sind. Die wenigen Menschen, die geblieben sind, haben oft keine andere Wahl. Alte und kranke Menschen können nicht fliehen, und diejenigen, die noch mobil sind, fürchten, ihre letzten Habseligkeiten zu verlieren, wenn sie gehen. Die Menschen leben in ständiger Lebensgefahr, in Angst vor Beschuss, vor Entführung und Folter, doch der Verlust ihrer Heimat scheint für sie der größte Albtraum zu sein. Die tägliche Realität dieser Menschen ist geprägt von Unsicherheit, doch auch von einem erstaunlichen Mut und einer tiefen Verwurzelung in ihrer Heimat.
-Die sechsjährige Anhelina lebt bei ihrer Großmutter in Borschtschiwka. Sie ist traumatisiert vom ständigen Beschuss, leidet unter Panikattacken. 2025 gewann Florian Bachmeier damit einen World Press Photo Award. Es beeindruckte die Jury, "wie es dem Fotografen gelang, ein solch stilles Bild aufzunehmen, das gleichwohl den Betrachter veranlasst, innezuhalten und einen Aspekt des russischen Kriegs gegen die Ukraine zu bedenken, der ansonsten nicht ausreichend berücksichtigt wird."´ 
-'Beschreibung für Bild 1...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+1', title: 'UKRAINE BILD 1', caption: 'Beschreibung für Bild 1...' },
             { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+2', title: 'UKRAINE BILD 2', caption: 'Beschreibung für Bild 2...' },
             { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+3', title: 'UKRAINE BILD 3', caption: 'Beschreibung für Bild 3...' },
             { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+4', title: 'UKRAINE BILD 4', caption: 'Beschreibung für Bild 4...' },
@@ -319,8 +315,8 @@ Die sechsjährige Anhelina lebt bei ihrer Großmutter in Borschtschiwka. Sie ist
 
             // --- BEREICH III: ZEITSCHRIFTEN (3 Texte) ---
             { room: 'zeitschriften', isTextOnly: true, hasTitle: false, title: '', caption: 'Dies ist der erste Text für den Zeitschriftenbereich. Er besitzt absichtlich keine Überschrift, sondern fängt direkt als Fließtextabsatz mit engem Zeilenabstand an.' },
-            { room: 'zeitschriften', isTextOnly: true, hasTitle: true, title: 'ERSTE TEXTÜBERSCHRIFT', caption: 'Dies ist der zweite Text im Zeitschriftenbereich. Er besitzt oben drüber eine sauber formatierte, fette Überschrift.' },
-            { room: 'zeitschriften', isTextOnly: true, hasTitle: true, title: 'ZWEITE TEXTÜBERSCHRIFT', caption: 'Dies ist der dritte Text im Zeitschriftenbereich. Auch dieser Text besitzt eine eigene Überschrift.' },
+            { room: 'zeitschriften', isTextOnly: true, hasTitle: true, title: 'MENSCHEN AUF DER FLUCHT', caption: 'Dies ist der zweite Text im Zeitschriftenbereich. Er besitzt oben drüber eine sauber formatierte, fette Überschrift.' },
+            { room: 'zeitschriften', isTextOnly: true, hasTitle: true, title: 'IN EUROPA UND SÜDASIEN', caption: 'Dies ist der dritte Text im Zeitschriftenbereich. Auch dieser Text besitzt eine eigene Überschrift.' },
 
             // --- BEREICH IV: MENSCHEN AUF DER FLUCHT IN EUROPA UND SÜDASIEN (8 Bilder) ---
             { room: 'suedasien', src: 'https://placehold.co/800x600/1e293b/ffffff?text=Flucht+1', title: 'FLUCHT BILD 1', caption: 'Beschreibung...' },
@@ -367,11 +363,13 @@ Die sechsjährige Anhelina lebt bei ihrer Großmutter in Borschtschiwka. Sie ist
 
         document.addEventListener("DOMContentLoaded", () => {
             imageDatabase.forEach((imageData, index) => {
-                const targetGrid = document.getElementById('grid-' + imageData.room);
+                // Bei normalen Bildern suchen wir nach 'grid-raumname', bei Zeitschriften direkt im Text-Container
+                const targetId = imageData.isTextOnly ? 'grid-zeitschriften' : 'grid-' + imageData.room;
+                const targetGrid = document.getElementById(targetId);
+                
                 if (targetGrid) {
                     const element = document.createElement('div');
                     
-                    // Unterscheidung: Reiner Text (Zeitschriften) oder Galerie-Bild
                     if (imageData.isTextOnly) {
                         element.className = "border-b border-neutral-200 pb-6 last:border-0";
                         let htmlContent = '';
@@ -397,7 +395,6 @@ Die sechsjährige Anhelina lebt bei ihrer Großmutter in Borschtschiwka. Sie ist
         let currentImageIndex = 0;
 
         function openLightbox(index) {
-            // Verhindert das Öffnen der Lightbox bei reinen Textelementen
             if(imageDatabase[index].isTextOnly) return;
 
             currentImageIndex = index;
@@ -406,7 +403,6 @@ Die sechsjährige Anhelina lebt bei ihrer Großmutter in Borschtschiwka. Sie ist
             document.getElementById('lightbox-title').innerText = item.title;
             document.getElementById('lightbox-caption').innerText = item.caption;
             
-            // Zählt nur echte Bilder für den Counter
             const totalImages = imageDatabase.filter(img => !img.isTextOnly).length;
             const realIndex = imageDatabase.slice(0, index).filter(img => !img.isTextOnly).length + 1;
             
