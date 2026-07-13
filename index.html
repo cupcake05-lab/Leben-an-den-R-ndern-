@@ -51,9 +51,9 @@
 
         <div class="bg-neutral-100 border-b border-neutral-200 py-2.5 overflow-x-auto hide-scrollbar flex whitespace-nowrap px-4 space-x-2 md:justify-center">
             <button onclick="scrollToSection('ukraine')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Ukraine</button>
-            <button onclick="scrollToSection('abchasien')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Abchasien</button>
-            <button onclick="scrollToSection('zeitschriften')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Zeitschriften</button>
-            <button onclick="scrollToSection('suedostasien')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Südostasien</button>
+            <button onclick="scrollToSection('abchasien')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Autonome Republik Abchasien (Georgien)</button>
+            <button onclick="scrollToSection('zeitschriften')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Dokumentation von Zeitungen und Zeitschriften</button>
+            <button onclick="scrollToSection('suedasien')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Menschen auf der Flucht in Europa und Südasien</button>
             <button onclick="scrollToSection('venezuela')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Venezuela</button>
             <button onclick="scrollToSection('afghanistan')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Afghanistan</button>
             <button onclick="scrollToSection('rumaenien')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Rumänien</button>
@@ -134,22 +134,22 @@
         <span class="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-bold block mb-3">Interaktive Abteilungen</span>
         <h2 class="text-2xl md:text-3xl font-extrabold mb-8 tracking-tight">Wählen Sie einen Ausstellungsraum</h2>
         
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
             <button onclick="scrollToSection('ukraine')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
                 <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1">Bereich I</span>
                 <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Ukraine</span>
             </button>
             <button onclick="scrollToSection('abchasien')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
                 <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1">Bereich II</span>
-                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Abchasien</span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Autonome Republik Abchasien (Georgien)</span>
             </button>
             <button onclick="scrollToSection('zeitschriften')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
                 <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1">Bereich III</span>
-                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Zeitschriften</span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Dokumentation von Zeitungen und Zeitschriften</span>
             </button>
-            <button onclick="scrollToSection('suedostasien')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
+            <button onclick="scrollToSection('suedasien')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
                 <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1">Bereich IV</span>
-                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Südostasien</span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Menschen auf der Flucht in Europa und Südasiens</span>
             </button>
             <button onclick="scrollToSection('venezuela')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
                 <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1">Bereich V</span>
@@ -174,7 +174,7 @@
         </div>
     </section>
 
-    <main class="max-w-4xl mx-auto px-4 md:px-6 pb-28">
+    <main class="max-w-4xl mx-auto px-4 md:px-6 pb-12">
         <section id="room-ukraine" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
             <div class="mb-8">
                 <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold block mb-1">Bereich I</span>
@@ -186,7 +186,7 @@
         <section id="room-abchasien" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
             <div class="mb-8">
                 <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold block mb-1">Bereich II</span>
-                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Autonome Republik Abchasien</h3>
+                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Autonome Republik Abchasien (Georgien)</h3>
             </div>
             <div id="grid-abchasien" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
         </section>
@@ -194,17 +194,17 @@
         <section id="room-zeitschriften" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
             <div class="mb-8">
                 <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold block mb-1">Bereich III</span>
-                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Zeitschriften & Veröffentlichungen</h3>
+                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Dokumentation von Zeitungen und Zeitschriften</h3>
             </div>
-            <div id="grid-zeitschriften" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+            <div id="grid-zeitschriften" class="space-y-10 max-w-2xl mx-auto"></div>
         </section>
 
-        <section id="room-suedostasien" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
+        <section id="room-suedasien" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
             <div class="mb-8">
                 <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold block mb-1">Bereich IV</span>
-                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Südostasien</h3>
+                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Menschen auf der Flucht in Europa und Südasien</h3>
             </div>
-            <div id="grid-suedostasien" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+            <div id="grid-suedasien" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
         </section>
 
         <section id="room-venezuela" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
@@ -248,6 +248,15 @@
         </section>
     </main>
 
+    <section class="max-w-4xl mx-auto px-4 md:px-6 pb-24 border-t border-neutral-200 pt-12">
+        <div class="bg-neutral-50 border border-neutral-200 p-8 rounded-sm">
+            <h4 class="text-lg font-bold tracking-tight text-neutral-900 mb-3">Abschließende Betrachtung</h4>
+            <p class="text-sm text-neutral-600 font-light leading-relaxed">
+                Hier steht dein abschließender Text für die Ausstellung. Du kannst diese Zeilen ganz einfach direkt im HTML-Code anpassen. Sie bilden den finalen Schlusspunkt des digitalen Ausstellungsführers vor dem Impressum.
+            </p>
+        </div>
+    </section>
+
     <footer class="bg-neutral-950 text-white py-12 border-t border-neutral-900">
         <div class="max-w-7xl mx-auto px-4 md:px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
@@ -282,54 +291,75 @@
         }
 
         const imageDatabase = [
-            {
-                room: 'ukraine',
-                src: 'https://placehold.co/800x600/181818/ffffff?text=Anhelina+in+Borschtschiwka', 
-                title: 'Anhelina in Borschtschiwka',
-                caption: 'Die sechsjährige Anhelina nahe der Front in der Ukraine. Ausgezeichnet mit dem World Press Photo Award 2025.'
-            },
-            {
-                room: 'ukraine',
-                src: 'https://placehold.co/800x600/181818/ffffff?text=Tarutyne+Steppe', 
-                title: 'Tarutyne Steppe',
-                caption: 'Melancholische Winteraufnahme der weiten Steppenlandschaft im Süden des Landes.'
-            },
-            {
-                room: 'ukraine',
-                src: 'https://placehold.co/800x600/181818/ffffff?text=Maidan+Kiew',
-                title: 'Maidan, Kiew',
-                caption: 'Historische Aufnahme von den Protesten im Zentrum von Kiew, Winter 2013/2014.'
-            },
-            {
-                room: 'abchasien',
-                src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Zerfallenes+Sanatorium',
-                title: 'Zerfallenes Sanatorium',
-                caption: 'Relikte sowjetischer Architektur in Sukhumi, heute von wilder Natur zurückerobert.'
-            },
-            {
-                room: 'abchasien',
-                src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Kueste+bei+Gagra',
-                title: 'Die Küste bei Gagra',
-                caption: 'Einsame Steinstrände am Schwarzen Meer, fotografiert im dichten Herbstnebel.'
-            },
-            {
-                room: 'zeitschriften',
-                src: 'https://placehold.co/800x600/333333/ffffff?text=GEO+Cover',
-                title: 'GEO Cover-Spezial',
-                caption: 'Dokumentation über das ländliche Osteuropa in einer der bedeutendsten Printausgaben.'
-            },
-            {
-                room: 'suedostasien',
-                src: 'https://placehold.co/800x600/1e293b/ffffff?text=Mekong',
-                title: 'Flussleben am Mekong',
-                caption: 'Kinder beim Baden in den trüben Gewässern des Flusses bei Abenddämmerung.'
-            },
-            {
-                room: 'venezuela',
-                src: 'https://placehold.co/800x600/0f172a/ffffff?text=Caracas+Alltag',
-                title: 'Alltag in Caracas',
-                caption: 'Aufzeichnung des dichten urbanen Lebens in den Straßen der venezolanischen Hauptstadt.'
-            }
+            // --- BEREICH I: UKRAINE (15 Bilder) ---
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+1', title: 'UKRAINE BILD 1', caption: 'Beschreibung für Bild 1...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+2', title: 'UKRAINE BILD 2', caption: 'Beschreibung für Bild 2...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+3', title: 'UKRAINE BILD 3', caption: 'Beschreibung für Bild 3...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+4', title: 'UKRAINE BILD 4', caption: 'Beschreibung für Bild 4...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+5', title: 'UKRAINE BILD 5', caption: 'Beschreibung für Bild 5...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+6', title: 'UKRAINE BILD 6', caption: 'Beschreibung für Bild 6...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+7', title: 'UKRAINE BILD 7', caption: 'Beschreibung für Bild 7...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+8', title: 'UKRAINE BILD 8', caption: 'Beschreibung für Bild 8...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+9', title: 'UKRAINE BILD 9', caption: 'Beschreibung für Bild 9...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+10', title: 'UKRAINE BILD 10', caption: 'Beschreibung für Bild 10...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+11', title: 'UKRAINE BILD 11', caption: 'Beschreibung für Bild 11...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+12', title: 'UKRAINE BILD 12', caption: 'Beschreibung für Bild 12...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+13', title: 'UKRAINE BILD 13', caption: 'Beschreibung für Bild 13...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+14', title: 'UKRAINE BILD 14', caption: 'Beschreibung für Bild 14...' },
+            { room: 'ukraine', src: 'https://placehold.co/800x600/181818/ffffff?text=Ukraine+15', title: 'UKRAINE BILD 15', caption: 'Beschreibung für Bild 15...' },
+
+            // --- BEREICH II: AUTONOME REPUBLIK ABCHASIEN (4 Bilder) ---
+            { room: 'abchasien', src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Abchasien+1', title: 'ABCHASIEN BILD 1', caption: 'Beschreibung...' },
+            { room: 'abchasien', src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Abchasien+2', title: 'ABCHASIEN BILD 2', caption: 'Beschreibung...' },
+            { room: 'abchasien', src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Abchasien+3', title: 'ABCHASIEN BILD 3', caption: 'Beschreibung...' },
+            { room: 'abchasien', src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Abchasien+4', title: 'ABCHASIEN BILD 4', caption: 'Beschreibung...' },
+
+            // --- BEREICH III: ZEITSCHRIFTEN (3 Texte) ---
+            { room: 'zeitschriften', isTextOnly: true, hasTitle: false, title: '', caption: 'Dies ist der erste Text für den Zeitschriftenbereich. Er besitzt absichtlich keine Überschrift, sondern fängt direkt als Fließtextabsatz mit engem Zeilenabstand an.' },
+            { room: 'zeitschriften', isTextOnly: true, hasTitle: true, title: 'ERSTE TEXTÜBERSCHRIFT', caption: 'Dies ist der zweite Text im Zeitschriftenbereich. Er besitzt oben drüber eine sauber formatierte, fette Überschrift.' },
+            { room: 'zeitschriften', isTextOnly: true, hasTitle: true, title: 'ZWEITE TEXTÜBERSCHRIFT', caption: 'Dies ist der dritte Text im Zeitschriftenbereich. Auch dieser Text besitzt eine eigene Überschrift.' },
+
+            // --- BEREICH IV: MENSCHEN AUF DER FLUCHT IN EUROPA UND SÜDASIEN (8 Bilder) ---
+            { room: 'suedasien', src: 'https://placehold.co/800x600/1e293b/ffffff?text=Flucht+1', title: 'FLUCHT BILD 1', caption: 'Beschreibung...' },
+            { room: 'suedasien', src: 'https://placehold.co/800x600/1e293b/ffffff?text=Flucht+2', title: 'FLUCHT BILD 2', caption: 'Beschreibung...' },
+            { room: 'suedasien', src: 'https://placehold.co/800x600/1e293b/ffffff?text=Flucht+3', title: 'FLUCHT BILD 3', caption: 'Beschreibung...' },
+            { room: 'suedasien', src: 'https://placehold.co/800x600/1e293b/ffffff?text=Flucht+4', title: 'FLUCHT BILD 4', caption: 'Beschreibung...' },
+            { room: 'suedasien', src: 'https://placehold.co/800x600/1e293b/ffffff?text=Flucht+5', title: 'FLUCHT BILD 5', caption: 'Beschreibung...' },
+            { room: 'suedasien', src: 'https://placehold.co/800x600/1e293b/ffffff?text=Flucht+6', title: 'FLUCHT BILD 6', caption: 'Beschreibung...' },
+            { room: 'suedasien', src: 'https://placehold.co/800x600/1e293b/ffffff?text=Flucht+7', title: 'FLUCHT BILD 7', caption: 'Beschreibung...' },
+            { room: 'suedasien', src: 'https://placehold.co/800x600/1e293b/ffffff?text=Flucht+8', title: 'FLUCHT BILD 8', caption: 'Beschreibung...' },
+
+            // --- BEREICH V: VENEZUELA (4 Bilder) ---
+            { room: 'venezuela', src: 'https://placehold.co/800x600/0f172a/ffffff?text=Venezuela+1', title: 'VENEZUELA BILD 1', caption: 'Beschreibung...' },
+            { room: 'venezuela', src: 'https://placehold.co/800x600/0f172a/ffffff?text=Venezuela+2', title: 'VENEZUELA BILD 2', caption: 'Beschreibung...' },
+            { room: 'venezuela', src: 'https://placehold.co/800x600/0f172a/ffffff?text=Venezuela+3', title: 'VENEZUELA BILD 3', caption: 'Beschreibung...' },
+            { room: 'venezuela', src: 'https://placehold.co/800x600/0f172a/ffffff?text=Venezuela+4', title: 'VENEZUELA BILD 4', caption: 'Beschreibung...' },
+
+            // --- BEREICH VI: AFGHANISTAN (6 Bilder) ---
+            { room: 'afghanistan', src: 'https://placehold.co/800x600/451a03/ffffff?text=Afghanistan+1', title: 'AFGHANISTAN BILD 1', caption: 'Beschreibung...' },
+            { room: 'afghanistan', src: 'https://placehold.co/800x600/451a03/ffffff?text=Afghanistan+2', title: 'AFGHANISTAN BILD 2', caption: 'Beschreibung...' },
+            { room: 'afghanistan', src: 'https://placehold.co/800x600/451a03/ffffff?text=Afghanistan+3', title: 'AFGHANISTAN BILD 3', caption: 'Beschreibung...' },
+            { room: 'afghanistan', src: 'https://placehold.co/800x600/451a03/ffffff?text=Afghanistan+4', title: 'AFGHANISTAN BILD 4', caption: 'Beschreibung...' },
+            { room: 'afghanistan', src: 'https://placehold.co/800x600/451a03/ffffff?text=Afghanistan+5', title: 'AFGHANISTAN BILD 5', caption: 'Beschreibung...' },
+            { room: 'afghanistan', src: 'https://placehold.co/800x600/451a03/ffffff?text=Afghanistan+6', title: 'AFGHANISTAN BILD 6', caption: 'Beschreibung...' },
+
+            // --- BEREICH VII: RUMÄNIEN (5 Bilder) ---
+            { room: 'rumaenien', src: 'https://placehold.co/800x600/064e3b/ffffff?text=Rumaenien+1', title: 'RUMÄNIEN BILD 1', caption: 'Beschreibung...' },
+            { room: 'rumaenien', src: 'https://placehold.co/800x600/064e3b/ffffff?text=Rumaenien+2', title: 'RUMÄNIEN BILD 2', caption: 'Beschreibung...' },
+            { room: 'rumaenien', src: 'https://placehold.co/800x600/064e3b/ffffff?text=Rumaenien+3', title: 'RUMÄNIEN BILD 3', caption: 'Beschreibung...' },
+            { room: 'rumaenien', src: 'https://placehold.co/800x600/064e3b/ffffff?text=Rumaenien+4', title: 'RUMÄNIEN BILD 4', caption: 'Beschreibung...' },
+            { room: 'rumaenien', src: 'https://placehold.co/800x600/064e3b/ffffff?text=Rumaenien+5', title: 'RUMÄNIEN BILD 5', caption: 'Beschreibung...' },
+
+            // --- BEREICH VIII: BANGLADESCH (6 Bilder) ---
+            { room: 'bangladesch', src: 'https://placehold.co/800x600/172554/ffffff?text=Bangladesch+1', title: 'BANGLADESCH BILD 1', caption: 'Beschreibung...' },
+            { room: 'bangladesch', src: 'https://placehold.co/800x600/172554/ffffff?text=Bangladesch+2', title: 'BANGLADESCH BILD 2', caption: 'Beschreibung...' },
+            { room: 'bangladesch', src: 'https://placehold.co/800x600/172554/ffffff?text=Bangladesch+3', title: 'BANGLADESCH BILD 3', caption: 'Beschreibung...' },
+            { room: 'bangladesch', src: 'https://placehold.co/800x600/172554/ffffff?text=Bangladesch+4', title: 'BANGLADESCH BILD 4', caption: 'Beschreibung...' },
+            { room: 'bangladesch', src: 'https://placehold.co/800x600/172554/ffffff?text=Bangladesch+5', title: 'BANGLADESCH BILD 5', caption: 'Beschreibung...' },
+            { room: 'bangladesch', src: 'https://placehold.co/800x600/172554/ffffff?text=Bangladesch+6', title: 'BANGLADESCH BILD 6', caption: 'Beschreibung...' },
+
+            // --- BEREICH IX: ÖSTERREICH (1 Bild) ---
+            { room: 'oesterreich', src: 'https://placehold.co/800x600/2e1065/ffffff?text=Oesterreich+1', title: 'ÖSTERREICH BILD 1', caption: 'Beschreibung...' }
         ];
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -337,14 +367,25 @@
                 const targetGrid = document.getElementById('grid-' + imageData.room);
                 if (targetGrid) {
                     const element = document.createElement('div');
-                    element.className = "flex flex-col cursor-pointer";
-                    element.setAttribute('onclick', `openLightbox(${index})`);
                     
-                    element.innerHTML = `
-                        <img src="${imageData.src}" alt="${imageData.title}" class="w-full h-auto object-cover rounded-sm mb-3">
-                        <h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-1">${imageData.title}</h4>
-                        <p class="text-xs text-neutral-600 font-light !leading-[1.2]">${imageData.caption}</p>
-                    `;
+                    // Unterscheidung: Reiner Text (Zeitschriften) oder Galerie-Bild
+                    if (imageData.isTextOnly) {
+                        element.className = "border-b border-neutral-200 pb-6 last:border-0";
+                        let htmlContent = '';
+                        if (imageData.hasTitle) {
+                            htmlContent += `<h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-2">${imageData.title}</h4>`;
+                        }
+                        htmlContent += `<p class="text-xs text-neutral-600 font-light !leading-[1.4]">${imageData.caption}</p>`;
+                        element.innerHTML = htmlContent;
+                    } else {
+                        element.className = "flex flex-col cursor-pointer";
+                        element.setAttribute('onclick', `openLightbox(${index})`);
+                        element.innerHTML = `
+                            <img src="${imageData.src}" alt="${imageData.title}" class="w-full h-auto object-cover rounded-sm mb-3">
+                            <h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-1">${imageData.title}</h4>
+                            <p class="text-xs text-neutral-600 font-light !leading-[1.2]">${imageData.caption}</p>
+                        `;
+                    }
                     targetGrid.appendChild(element);
                 }
             });
@@ -353,12 +394,20 @@
         let currentImageIndex = 0;
 
         function openLightbox(index) {
+            // Verhindert das Öffnen der Lightbox bei reinen Textelementen
+            if(imageDatabase[index].isTextOnly) return;
+
             currentImageIndex = index;
             const item = imageDatabase[index];
             document.getElementById('lightbox-img').src = item.src;
             document.getElementById('lightbox-title').innerText = item.title;
             document.getElementById('lightbox-caption').innerText = item.caption;
-            document.getElementById('lightbox-counter').innerText = `${index + 1} / ${imageDatabase.length}`;
+            
+            // Zählt nur echte Bilder für den Counter
+            const totalImages = imageDatabase.filter(img => !img.isTextOnly).length;
+            const realIndex = imageDatabase.slice(0, index).filter(img => !img.isTextOnly).length + 1;
+            
+            document.getElementById('lightbox-counter').innerText = `${realIndex} / ${totalImages}`;
             document.getElementById('lightbox').classList.remove('opacity-0', 'pointer-events-none');
         }
 
@@ -367,9 +416,12 @@
         }
 
         function navigateLightbox(direction) {
-            currentImageIndex += direction;
-            if (currentImageIndex >= imageDatabase.length) currentImageIndex = 0;
-            if (currentImageIndex < 0) currentImageIndex = imageDatabase.length - 1;
+            do {
+                currentImageIndex += direction;
+                if (currentImageIndex >= imageDatabase.length) currentImageIndex = 0;
+                if (currentImageIndex < 0) currentImageIndex = imageDatabase.length - 1;
+            } while (imageDatabase[currentImageIndex].isTextOnly);
+            
             openLightbox(currentImageIndex);
         }
     </script>
