@@ -283,318 +283,68 @@
             </div>
             <div id="grid-suedostasien" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"></div>
         </section>
-
-        <!-- BEREICH 5: VENEZUELA -->
-        <section id="room-venezuela" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
-            <div class="mb-8">
-                <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold block mb-1">Bereich V</span>
-                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Venezuela</h3>
-                <p class="text-neutral-500 font-light mt-2 text-xs md:text-sm">Visuelle Aufzeichnungen eines krisengebeutelten südamerikanischen Staates.</p>
-            </div>
-            <div id="grid-venezuela" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"></div>
-        </section>
-
-        <!-- BEREICH 6: AFGHANISTAN -->
-        <section id="room-afghanistan" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
-            <div class="mb-8">
-                <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold block mb-1">Bereich VI</span>
-                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Afghanistan</h3>
-                <p class="text-neutral-500 font-light mt-2 text-xs md:text-sm">Eindrücke eines vom jahrzehntelangen Krieg gezeichneten Landes und dessen stolzer Kultur.</p>
-            </div>
-            <div id="grid-afghanistan" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"></div>
-        </section>
-
-        <!-- BEREICH 7: RUMÄNIEN -->
-        <section id="room-rumaenien" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
-            <div class="mb-8">
-                <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold block mb-1">Bereich VII</span>
-                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Rumänien</h3>
-                <p class="text-neutral-500 font-light mt-2 text-xs md:text-sm">Vom wilden Donaudelta über Letea und Sulina hin zu traditionellen Dorfgemeinschaften.</p>
-            </div>
-            <div id="grid-rumaenien" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"></div>
-        </section>
-
-        <!-- BEREICH 8: BANGLADESCH -->
-        <section id="room-bangladesch" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
-            <div class="mb-8">
-                <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold block mb-1">Bereich VIII</span>
-                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Bangladesch</h3>
-                <p class="text-neutral-500 font-light mt-2 text-xs md:text-sm">Leben am Wasser, Klimawandel und industrielle Transformationen.</p>
-            </div>
-            <div id="grid-bangladesch" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"></div>
-        </section>
-
-        <!-- BEREICH 9: ÖSTERREICH -->
-        <section id="room-oesterreich" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
-            <div class="mb-8">
-                <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold block mb-1">Bereich IX</span>
-                <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Österreich</h3>
-                <p class="text-neutral-500 font-light mt-2 text-xs md:text-sm">Dokumentationen alpiner Identitäten und ländlicher Kulturräume.</p>
-            </div>
-            <div id="grid-oesterreich" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"></div>
-        </section>
-        
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-neutral-950 text-white py-12 border-t border-neutral-900">
-        <div class="max-w-7xl mx-auto px-4 md:px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
-            <div>
-                <p class="text-sm font-extrabold tracking-wider uppercase mb-1 gallery-font">Florian Bachmeier — Ausstellungsführer</p>
-                <p class="text-[11px] text-neutral-400 font-light">Haus am Dom (20.08. – 24.09.2026) | Semesterprojekt | © 2026</p>
-            </div>
-            <div class="flex space-x-6 text-neutral-400 text-base">
-                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.florianbachmeier.com/" target="_blank" class="hover:text-white transition-colors text-[10px] font-bold uppercase tracking-widest gallery-font">Website des Künstlers <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- INTERAKTIVES BILD-MODAL (LIGHTBOX MIT HANDY-NAVIGATION!) -->
-    <div id="lightbox" class="fixed inset-0 z-50 bg-neutral-950/98 flex flex-col justify-between items-center py-6 px-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        
-        <!-- Header im Vollbildmodus -->
-        <div class="w-full max-w-5xl flex justify-between items-center">
-            <span id="lightbox-counter" class="text-xs text-neutral-400 font-mono tracking-widest">0 / 0</span>
-            <button onclick="closeLightbox()" class="text-white text-2xl p-2 hover:text-neutral-400 transition-colors">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-        
-        <!-- Zentraler Bereich: Bild und Pfeile -->
-        <div class="relative w-full max-w-4xl flex items-center justify-between my-auto">
-            
-            <!-- Linker Pfeil (auf Handys unsichtbar, aber per Klickzone nutzbar / Desktop sichtbar) -->
-            <button onclick="navigateLightbox(-1)" class="absolute left-0 z-10 text-white bg-black/40 hover:bg-black/80 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full transition-all text-sm md:text-base">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-
-            <!-- Das geladene Bild -->
-            <div class="mx-auto max-w-full max-h-[60vh] flex items-center justify-center p-2">
-                <img id="lightbox-img" src="" alt="Großansicht" class="max-w-full max-h-[60vh] object-contain shadow-2xl rounded-sm">
-            </div>
-
-            <!-- Rechter Pfeil -->
-            <button onclick="navigateLightbox(1)" class="absolute right-0 z-10 text-white bg-black/40 hover:bg-black/80 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full transition-all text-sm md:text-base">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-        </div>
-
-        <!-- Footer im Vollbildmodus (Unterschrift & Steuerungshilfe fürs Handy) -->
-        <div class="text-center w-full max-w-2xl px-4 mt-4">
-            <h4 id="lightbox-title" class="text-white text-base md:text-lg font-bold tracking-tight">Bild-Überschrift</h4>
-            <p id="lightbox-caption" class="text-neutral-400 font-light text-xs md:text-sm mt-1">Bild-Unterschrift und nähere Informationen zum Foto.</p>
-            <span class="text-[9px] text-neutral-500 uppercase tracking-widest block mt-4">Tippe auf die Pfeile zum Navigieren</span>
-        </div>
-    </div>
-
-    <!-- ========================================== -->
-    <!-- JAVASCRIPT: BILDERDATEN & LOGIK           -->
-    <!-- ========================================== -->
-    <script>
-        // Smooth Scroll Funktion für die Navigation
-        function scrollToSection(id) {
-            const element = document.getElementById('room-' + id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        // =================================================================
-        // BILDER-DATENBANK (Bis zu 49 bzw. 50 Bilder erweiterbar!)
-        // =================================================================
-        // room-Werte: 'ukraine', 'abchasien', 'zeitschriften', 'suedostasien', 
-        // 'venezuela', 'afghanistan', 'rumaenien', 'bangladesch', 'oesterreich'
-        const imageDatabase = [
-            // --- UKRAINE (Das preisgekrönte Bild "Anhelina" steht am Anfang) ---
-            {
-                room: 'ukraine',
-                src: 'https://placehold.co/800x600/181818/ffffff?text=Anhelina+in+Borschtschiwka', 
-                title: 'Anhelina in Borschtschiwka',
-                caption: 'Die sechsjährige Anhelina nahe der Front in der Ukraine. Ausgezeichnet mit dem World Press Photo Award 2025.'
-            },
-            {
-                room: 'ukraine',
-                src: 'https://placehold.co/800x600/181818/ffffff?text=Tarutyne+Steppe', 
-                title: 'Tarutyne Steppe',
-                caption: 'Melancholische Winteraufnahme der weiten Steppenlandschaft im Süden des Landes.'
-            },
-            {
-                room: 'ukraine',
-                src: 'https://placehold.co/800x600/181818/ffffff?text=Maidan+Kiew',
-                title: 'Maidan, Kiew',
-                caption: 'Historische Aufnahme von den Protesten im Zentrum von Kiew, Winter 2013/2014.'
-            },
-
-            // --- ABCHASIEN ---
-            {
-                room: 'abchasien',
-                src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Zerfallenes+Sanatorium',
-                title: 'Zerfallenes Sanatorium',
-                caption: 'Relikte sowjetischer Architektur in Sukhumi, heute von wilder Natur zurückerobert.'
-            },
-            {
-                room: 'abchasien',
-                src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Kueste+bei+Gagra',
-                title: 'Die Küste bei Gagra',
-                caption: 'Einsame Steinstrände am Schwarzen Meer, fotografiert im dichten Herbstnebel.'
-            },
-
-            // --- ZEITSCHRIFTEN ---
-            {
-                room: 'zeitschriften',
-                src: 'https://placehold.co/800x600/333333/ffffff?text=GEO+Cover',
-                title: 'GEO Cover-Spezial',
-                caption: 'Dokumentation über das ländliche Osteuropa in einer der bedeutendsten Printausgaben.'
-            },
-
-            // --- SÜDOSTASIEN ---
-            {
-                room: 'suedostasien',
-                src: 'https://placehold.co/800x600/1e293b/ffffff?text=Mekong',
-                title: 'Flussleben am Mekong',
-                caption: 'Kinder beim Baden in den trüben Gewässern des Flusses bei Abenddämmerung.'
-            },
-
-            // --- VENEZUELA ---
+// --- VENEZUELA ---
             {
                 room: 'venezuela',
-                src: 'https://placehold.co/800x600/4c1d95/ffffff?text=Caracas',
-                title: 'Straßen von Caracas',
-                caption: 'Ein dichter Moment im bunten und lauten Gewimmel der Großstadtslum-Viertel.'
-            },
-
-            // --- AFGHANISTAN ---
-            {
-                room: 'afghanistan',
-                src: 'https://placehold.co/800x600/0f172a/ffffff?text=Hindukusch',
-                title: 'Das Hindukusch-Gebirge',
-                caption: 'Die majestätische und zugleich unbarmherzige Bergkulisse im Norden Kabuls.'
-            },
-
-            // --- RUMÄNIEN ---
-            {
-                room: 'rumaenien',
-                src: 'https://placehold.co/800x600/064e3b/ffffff?text=Letea',
-                title: 'Letea Sandpiste',
-                caption: 'Sandige Wege und jahrhundertealte Traditionen tief im abgelegenen Donaudelta.'
-            },
-
-            // --- BANGLADESCH ---
-            {
-                room: 'bangladesch',
-                src: 'https://placehold.co/800x600/7c2d12/ffffff?text=Dhaka',
-                title: 'Ziegelbrennerei in Dhaka',
-                caption: 'Harte körperliche Arbeit im dichten Qualm der Manufakturen außerhalb der Hauptstadt.'
-            },
-
-            // --- ÖSTERREICH ---
-            {
-                room: 'oesterreich',
-                src: 'https://placehold.co/800x600/181818/ffffff?text=Alpiner+Heuwirt',
-                title: 'Alpiner Heuwirt',
-                caption: 'Traditionelle Landwirtschaft und die raue Schönheit der Ostalpen.'
+                src: 'https://placehold.co/800x600/0f172a/ffffff?text=Caracas+Alltag',
+                title: 'Alltag in Caracas',
+                caption: 'Aufzeichnung des dichten urbanen Lebens in den Straßen der venezolanischen Hauptstadt.'
             }
+        ]; // Ende der Bilddatenbank
 
-            // HINWEIS: Kopiere einfach die Blöcke hier drüber, um bis auf 49/50 Bilder zu erweitern!
-        ];
-
-        // ==========================================
-        // AUTOMATISCHE GALERIE-GENERIERUNG
-        // ==========================================
-        function generateGalleries() {
-            // Alle Grids leeren
-            const categories = [
-                'ukraine', 'abchasien', 'zeitschriften', 'suedostasien', 
-                'venezuela', 'afghanistan', 'rumaenien', 'bangladesch', 'oesterreich'
-            ];
-            
-            categories.forEach(cat => {
-                const grid = document.getElementById('grid-' + cat);
-                if (grid) grid.innerHTML = '';
-            });
-
-            // Bilder einsortieren
-            imageDatabase.forEach((imgData, index) => {
-                const container = document.getElementById('grid-' + imgData.room);
-                if (container) {
-                    const cardHTML = `
-                        <div class="gallery-card bg-white border border-neutral-200 p-4 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between rounded-sm">
-                            <div class="overflow-hidden bg-neutral-100 cursor-zoom-in aspect-[4/3] rounded-sm" 
-                                 onclick="openLightboxAtIndex(${index})">
-                                <img src="${imgData.src}" alt="${imgData.title}" class="w-full h-full object-cover">
-                            </div>
-                            <div class="mt-4">
-                                <h4 class="font-bold text-base md:text-lg text-neutral-900 tracking-tight leading-snug">${imgData.title}</h4>
-                                <p class="text-neutral-500 font-light text-xs md:text-sm mt-1.5 leading-relaxed">${imgData.caption}</p>
-                            </div>
-                        </div>
+        // =================================================================
+        // DYNAMISCHES RENDERN DER BILDER (KLASSISCHER LOOK OHNE RÄNDER)
+        // =================================================================
+        document.addEventListener("DOMContentLoaded", () => {
+            imageDatabase.forEach((imageData, index) => {
+                const targetGrid = document.getElementById('grid-' + imageData.room);
+                if (targetGrid) {
+                    // Hier erstellen wir den Eintrag: Komplett ohne weiße Boxen/Ränder
+                    const element = document.createElement('div');
+                    element.className = "flex flex-col cursor-pointer";
+                    element.setAttribute('onclick', `openLightbox(${index})`);
+                    
+                    element.innerHTML = `
+                        <img src="${imageData.src}" alt="${imageData.title}" class="w-full h-auto object-cover rounded-sm mb-3">
+                        <h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-1">${imageData.title}</h4>
+                        <p class="text-xs text-neutral-600 font-light !leading-[1.2]">${imageData.caption}</p>
                     `;
-                    container.innerHTML += cardHTML;
+                    
+                    targetGrid.appendChild(element);
                 }
             });
-        }
+        });
 
-        // ==========================================
-        // LIGHTBOX-LOGIK MIT DIAL- UND INDEXSUPPORT
-        // ==========================================
+        // =================================================================
+        // LIGHTBOX STEUERUNG (Für die Großansicht)
+        // =================================================================
         let currentImageIndex = 0;
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxTitle = document.getElementById('lightbox-title');
-        const lightboxCaption = document.getElementById('lightbox-caption');
-        const lightboxCounter = document.getElementById('lightbox-counter');
 
-        function openLightboxAtIndex(index) {
+        function openLightbox(index) {
             currentImageIndex = index;
-            updateLightboxContent();
+            const item = imageDatabase[index];
+            
+            document.getElementById('lightbox-img').src = item.src;
+            document.getElementById('lightbox-title').innerText = item.title;
+            document.getElementById('lightbox-caption').innerText = item.caption;
+            document.getElementById('lightbox-counter').innerText = `${index + 1} / ${imageDatabase.length}`;
+            
+            const lightbox = document.getElementById('lightbox');
             lightbox.classList.remove('opacity-0', 'pointer-events-none');
         }
 
-        function updateLightboxContent() {
-            const data = imageDatabase[currentImageIndex];
-            if (!data) return;
-
-            lightboxImg.src = data.src;
-            lightboxTitle.innerText = data.title;
-            lightboxCaption.innerText = data.caption;
-            lightboxCounter.innerText = `${currentImageIndex + 1} / ${imageDatabase.length}`;
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('opacity-0', 'pointer-events-none');
         }
 
         function navigateLightbox(direction) {
             currentImageIndex += direction;
-            if (currentImageIndex < 0) {
-                currentImageIndex = imageDatabase.length - 1; // Ans Ende springen
-            } else if (currentImageIndex >= imageDatabase.length) {
-                currentImageIndex = 0; // An den Anfang springen
-            }
-            updateLightboxContent();
+            if (currentImageIndex >= imageDatabase.length) currentImageIndex = 0;
+            if (currentImageIndex < 0) currentImageIndex = imageDatabase.length - 1;
+            openLightbox(currentImageIndex);
         }
-
-        function closeLightbox() {
-            lightbox.classList.add('opacity-0', 'pointer-events-none');
-            setTimeout(() => { lightboxImg.src = ''; }, 300);
-        }
-
-        // Event-Listener für Schließen
-        lightbox.addEventListener('click', (e) => {
-            // Wenn man außerhalb des Bildes oder auf Schließen klickt
-            if (e.target === lightbox || e.target.closest('button') === null) {
-                // optionaler klick-schließ-schutz, wenn man nur auf freien raum klickt
-            }
-        });
-
-        // Tastatursteuerung (Pfeiltasten & ESC)
-        document.addEventListener('keydown', (e) => {
-            if (lightbox.classList.contains('opacity-0')) return;
-            
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowRight') navigateLightbox(1);
-            if (e.key === 'ArrowLeft') navigateLightbox(-1);
-        });
-
-        // Beim ersten Laden die Galerie bauen
-        window.onload = generateGalleries;
     </script>
 </body>
 </html>
+    
