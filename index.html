@@ -349,69 +349,79 @@
             // --- ÖSTERREICH (1 Bild) ---
             { room: 'oesterreich', src: 'bild49.jpg', title: 'Krimmler Tauernweg, Krimml,<br>Österreich, 2025', caption: 'Seit über 2000 Jahren wird der Krimmler Tauernweg als Saumweg für den Transport von Gütern genutzt. 1947 wurde er für Jüdinnen und Juden zum Fluchtweg aus Lagern für „Displaced Persons“ nach Italien. Von dort aus hofften sie, nach Israel zu gelangen, um ein neues Leben in Freiheit zu beginnen.' }
         ];
+// 1. DIESE NEUE FUNKTION ERMÖGLICHT DAS SCROLLEN ZU DEN LÄNDERN
+    function scrollToSection(roomId) {
+        const target = document.getElementById('room-' + roomId);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 
-        document.addEventListener("DOMContentLoaded", () => {
-            imageDatabase.forEach((imageData, index) => {
-                // Bei normalen Bildern suchen wir nach 'grid-raumname', bei Zeitschriften direkt im Text-Container
-                const targetId = imageData.isTextOnly ? 'grid-zeitschriften' : 'grid-' + imageData.room;
-                const targetGrid = document.getElementById(targetId);
+    // 2. DEIN ORIGINALER CODE FÜR DAS LADEN DER BILDER
+    document.addEventListener("DOMContentLoaded", () => {
+        imageDatabase.forEach((imageData, index) => {
+            const targetId = imageData.isTextOnly ? 'grid-zeitschriften' : 'grid-' + imageData.room;
+            const targetGrid = document.getElementById(targetId);
+            
+            if (targetGrid) {
+                const element = document.createElement('div');
                 
-                if (targetGrid) {
-                    const element = document.createElement('div');
-                    
-                    if (imageData.isTextOnly) {
-                        element.className = "border-b border-neutral-200 pb-6 last:border-0";
-                        let htmlContent = '';
-                        if (imageData.hasTitle) {
-                            htmlContent += `<h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-2">${imageData.title}</h4>`;
-                        }
-                        htmlContent += `<p class="text-xs text-neutral-600 font-light !leading-[1.4]">${imageData.caption}</p>`;
-                        element.innerHTML = htmlContent;
-                    } else {
-                        element.className = "flex flex-col cursor-pointer";
-                        element.setAttribute('onclick', `openLightbox(${index})`);
-                        element.innerHTML = `
-                            <img src="${imageData.src}" alt="${imageData.title}" class="w-full h-auto object-cover rounded-sm mb-3">
-                            <h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-1">${imageData.title}</h4>
-                            <p class="text-sm text-neutral-600 font-neutral !leading-[1.2]">${imageData.caption}</p>
-                        `;
+                if (imageData.isTextOnly) {
+                    element.className = "border-b border-neutral-200 pb-6 last:border-0";
+                    let htmlContent = '';
+                    if (imageData.hasTitle) {
+                        htmlContent += `<h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-2">${imageData.title}</h4>`;
                     }
-                    targetGrid.appendChild(element);
+                    htmlContent += `<p class="text-xs text-neutral-600 font-light !leading-[1.4]">${imageData.caption}</p>`;
+                    element.innerHTML = htmlContent;
+                } else {
+                    element.className = "flex flex-col cursor-pointer";
+                    element.setAttribute('onclick', `openLightbox(${index})`);
+                    element.innerHTML = `
+                        <div class="overflow-hidden bg-neutral-100 border border-neutral-200 p-2 mb-3">
+                            <img src="${imageData.src}" alt="${imageData.title}" class="w-full h-64 md:h-80 object-cover filter grayscale hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-1">${imageData.title}</h4>
+                        <p class="text-xs text-neutral-500 font-neutral !leading-[1.2]">${imageData.caption}</p>
+                    `;
                 }
-            });
+                targetGrid.appendChild(element);
+            }
         });
+    });
 
-        let currentImageIndex = 0;
+    // 3. DEIN ORIGINALER CODE FÜR DIE BILD-GROSSANSICHT (LIGHTBOX)
+    let currentImageIndex = 0;
 
-        function openLightbox(index) {
-            if(imageDatabase[index].isTextOnly) return;
+    function openLightbox(index) {
+        if(imageDatabase[index].isTextOnly) return;
 
-            currentImageIndex = index;
-            const item = imageDatabase[index];
-            document.getElementById('lightbox-img').src = item.src;
-            document.getElementById('lightbox-title').innerText = item.title;
-            document.getElementById('lightbox-caption').innerText = item.caption;
-            
-            const totalImages = imageDatabase.filter(img => !img.isTextOnly).length;
-            const realIndex = imageDatabase.slice(0, index).filter(img => !img.isTextOnly).length + 1;
-            
-            document.getElementById('lightbox-counter').innerText = `${realIndex} / ${totalImages}`;
-            document.getElementById('lightbox').classList.remove('opacity-0', 'pointer-events-none');
-        }
+        currentImageIndex = index;
+        const item = imageDatabase[index];
+        document.getElementById('lightbox-img').src = item.src;
+        document.getElementById('lightbox-title').innerText = item.title;
+        document.getElementById('lightbox-caption').innerText = item.caption;
+        
+        const totalImages = imageDatabase.filter(img => !img.isTextOnly).length;
+        const realIndex = imageDatabase.slice(0, index).filter(img => !img.isTextOnly).length + 1;
+        
+        document.getElementById('lightbox-counter').innerText = `${realIndex} / ${totalImages}`;
+        document.getElementById('lightbox').classList.remove('opacity-0', 'pointer-events-none');
+    }
 
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.add('opacity-0', 'pointer-events-none');
-        }
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.add('opacity-0', 'pointer-events-none');
+    }
 
-        function navigateLightbox(direction) {
-            do {
-                currentImageIndex += direction;
-                if (currentImageIndex >= imageDatabase.length) currentImageIndex = 0;
-                if (currentImageIndex < 0) currentImageIndex = imageDatabase.length - 1;
-            } while (imageDatabase[currentImageIndex].isTextOnly);
-            
-            openLightbox(currentImageIndex);
-        }
-    </script>
+    function navigateLightbox(direction) {
+        do {
+            currentImageIndex += direction;
+            if (currentImageIndex >= imageDatabase.length) currentImageIndex = 0;
+            if (currentImageIndex < 0) currentImageIndex = imageDatabase.length - 1;
+        } while (imageDatabase[currentImageIndex].isTextOnly);
+        
+        openLightbox(currentImageIndex);
+    }
+</script>
 </body>
 </html>
