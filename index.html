@@ -342,7 +342,7 @@
             // --- ÖSTERREICH (1 Bild) ---
             { room: 'oesterreich', src: 'bild49.jpg', title: 'Krimmler Tauernweg, Krimml,<br>Österreich, 2025', caption: 'Seit über 2000 Jahren wird der Krimmler Tauernweg als Saumweg für den Transport von Gütern genutzt. 1947 wurde er für Jüdinnen und Juden zum Fluchtweg aus Lagern für „Displaced Persons“ nach Italien. Von dort aus hofften sie, nach Israel zu gelangen, um ein neues Leben in Freiheit zu beginnen.' }
         ];
-// 1. DIESE NEUE FUNKTION ERMÖGLICHT DAS SCROLLEN ZU DEN LÄNDERN
+// 1. SCROLL-FUNKTION (Original)
     function scrollToSection(roomId) {
         const target = document.getElementById('room-' + roomId);
         if (target) {
@@ -350,7 +350,7 @@
         }
     }
 
-    // 2. DEIN ORIGINALER CODE FÜR DAS LADEN DER BILDER
+    // 2. DEIN ORIGINALER CODE (100% Farbig, Original-Größen, kein Graufilter!)
     document.addEventListener("DOMContentLoaded", () => {
         imageDatabase.forEach((imageData, index) => {
             const targetId = imageData.isTextOnly ? 'grid-zeitschriften' : 'grid-' + imageData.room;
@@ -368,14 +368,13 @@
                     htmlContent += `<p class="text-xs text-neutral-600 font-light !leading-[1.4]">${imageData.caption}</p>`;
                     element.innerHTML = htmlContent;
                 } else {
+                    // GENAU WIE ES WAR:
                     element.className = "flex flex-col cursor-pointer";
                     element.setAttribute('onclick', `openLightbox(${index})`);
                     element.innerHTML = `
-                        <div class="overflow-hidden bg-neutral-100 border border-neutral-200 p-2 mb-3">
-                            <img src="${imageData.src}" alt="${imageData.title}" class="w-full h-64 md:h-80 object-cover filter grayscale hover:grayscale-0 transition-all duration-500">
-                        </div>
+                        <img src="${imageData.src}" alt="${imageData.title}" class="w-full h-auto object-cover rounded-sm mb-3">
                         <h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-1">${imageData.title}</h4>
-                        <p class="text-xs text-neutral-500 font-neutral !leading-[1.2]">${imageData.caption}</p>
+                        <p class="text-sm text-neutral-600 font-neutral !leading-[1.2]">${imageData.caption}</p>
                     `;
                 }
                 targetGrid.appendChild(element);
@@ -383,7 +382,7 @@
         });
     });
 
-    // 3. DEIN ORIGINALER CODE FÜR DIE BILD-GROSSANSICHT (LIGHTBOX)
+    // 3. DEIN ORIGINALER LIGHTBOX-CODE
     let currentImageIndex = 0;
 
     function openLightbox(index) {
