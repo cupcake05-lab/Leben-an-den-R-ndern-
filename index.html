@@ -34,12 +34,32 @@
 </head>
 <body class="selection:bg-neutral-900 selection:text-white">
 
-<header class="sticky top-0 z-40 bg-[#fafafa]/95 backdrop-blur-md border-b border-neutral-200/80">
+    <header class="sticky top-0 z-40 bg-[#fafafa]/95 backdrop-blur-md border-b border-neutral-200/80">
         <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
             <a href="#" class="text-base md:text-lg font-extrabold tracking-widest uppercase hover:opacity-70 transition-opacity gallery-font">
                 Bachmeier <span class="font-light text-neutral-400">Ausstellung</span>
             </a>
-          </div>
+            <nav class="hidden lg:flex space-x-6 text-xs font-semibold tracking-widest uppercase text-neutral-500">
+                <a href="#biografie" class="hover:text-black transition-colors">Künstler</a>
+                <a href="#vorwort" class="hover:text-black transition-colors">Vorwort</a>
+                <a href="#ausstellungsbereiche" class="hover:text-black transition-colors">Räume</a>
+            </nav>
+            <a href="#ausstellungsbereiche" class="bg-neutral-950 text-white text-[10px] font-bold px-4 py-3 uppercase tracking-[0.2em] hover:bg-neutral-800 transition-colors rounded-sm">
+                Leben an den Rändern 
+            </a>
+        </div>
+
+        <div class="bg-neutral-100 border-b border-neutral-200 py-2.5 overflow-x-auto hide-scrollbar flex whitespace-nowrap px-4 space-x-2 md:justify-center">
+            <button onclick="scrollToSection('ukraine')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Ukraine</button>
+            <button onclick="scrollToSection('abchasien')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Autonome Republik Abchasien (Georgien)</button>
+            <button onclick="scrollToSection('zeitschriften')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Dokumentation von Zeitungen und Zeitschriften</button>
+            <button onclick="scrollToSection('suedasien')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Menschen auf der Flucht in Europa und Südasien</button>
+            <button onclick="scrollToSection('venezuela')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Venezuela</button>
+            <button onclick="scrollToSection('afghanistan')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Afghanistan</button>
+            <button onclick="scrollToSection('rumaenien')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Rumänien</button>
+            <button onclick="scrollToSection('bangladesch')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Bangladesch</button>
+            <button onclick="scrollToSection('oesterreich')" class="text-xs bg-white border border-neutral-200 px-3 py-1.5 rounded-full hover:border-black transition-all">Österreich</button>
+        </div>
     </header>
 
     <section id="biografie" class="max-w-7xl mx-auto px-4 md:px-6 pt-10 pb-16 border-b border-neutral-200/80 scroll-mt-24">
@@ -128,39 +148,49 @@
     </div>
 </nav>
     
-    <section id="laender" class="max-w-7xl mx-auto px-4 md:px-6 py-16 scroll-mt-24 text-center">
+    <section id="austellungsräume" class="max-w-7xl mx-auto px-4 md:px-6 py-16 scroll-mt-24 text-center">
         <span class="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-bold block mb-3"></span>
         <h2 class="text-2xl md:text-3xl font-extrabold mb-8 tracking-tight"></h2>
+        
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
-        <button onclick="scrollToSection('ukraine')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
-            <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Ukraine</span>
-        </button>
-        <button onclick="scrollToSection('abchasien')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
-            <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Autonome Republik Abchasien (Georgien)</span>
-        </button>
-        <button onclick="scrollToSection('zeitschriften')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
-            <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Dokumentation von Zeitungen und Zeitschriften</span>
-        </button>
-        <button onclick="scrollToSection('suedasien')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
-            <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Menschen auf der Flucht in Europa und Südasiens</span>
-        </button>
-        <button onclick="scrollToSection('venezuela')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
-            <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Venezuela</span>
-        </button>
-        <button onclick="scrollToSection('afghanistan')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
-            <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Afghanistan</span>
-        </button>
-        <button onclick="scrollToSection('rumaenien')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
-            <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Rumänien</span>
-        </button>
-        <button onclick="scrollToSection('bangladesch')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
-            <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Bangladesch</span>
-        </button>
-        <button onclick="scrollToSection('oesterreich')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
-            <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Österreich</span>
-        </button>
-    </div>
-</section>
+            <button onclick="scrollToSection('ukraine')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
+                <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1"></span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Ukraine</span>
+            </button>
+            <button onclick="scrollToSection('abchasien')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
+                <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1"></span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Autonome Republik Abchasien (Georgien)</span>
+            </button>
+            <button onclick="scrollToSection('zeitschriften')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
+                <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1"></span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Dokumentation von Zeitungen und Zeitschriften</span>
+            </button>
+            <button onclick="scrollToSection('suedasien')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
+                <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1"></span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Menschen auf der Flucht in Europa und Südasiens</span>
+            </button>
+            <button onclick="scrollToSection('venezuela')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
+                <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1"></span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Venezuela</span>
+            </button>
+            <button onclick="scrollToSection('afghanistan')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
+                <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1"></span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Afghanistan</span>
+            </button>
+            <button onclick="scrollToSection('rumaenien')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
+                <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1"></span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Rumänien</span>
+            </button>
+            <button onclick="scrollToSection('bangladesch')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
+                <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1"></span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Bangladesch</span>
+            </button>
+            <button onclick="scrollToSection('oesterreich')" class="group p-5 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all duration-300 text-left rounded-sm">
+                <span class="block text-[8px] text-neutral-400 font-bold uppercase tracking-widest mb-1"></span>
+                <span class="block text-sm md:text-base font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">Österreich</span>
+            </button>
+        </div>
+    </section>
 
     <main class="max-w-4xl mx-auto px-4 md:px-6 pb-12">
         <section id="room-ukraine" class="py-12 border-t border-neutral-200/80 scroll-mt-24">
@@ -238,8 +268,11 @@
 
     <section class="max-w-4xl mx-auto px-4 md:px-6 pb-24 border-t border-neutral-200 pt-12">
         <div class="bg-neutral-50 border border-neutral-200 p-8 rounded-sm">
-            <h4 class="text-base text-neutral-600 font-light leading-relaxed"> Sie sind am Ende der Reise angekommen, zu der Sie Florian Bachmeier mit seinen Bildern eigeladen hat.<br><br>Gerne können Sie einen Kommentar im Gästebuch hinterlassen oder eine Mail schicken an:</h4>
-            <p class="text-sm text-neutral-600 font-light leading-relaxed">manus_schliersee@posteo.de<br><br>Texte: Florian Bachmeier, Mechtild Manus<br><br>Gestaltung: Elena Schmitt<br><br>Mehr über Florian Bachmeier:<br><br>www.florianbachmeier.com<br><br>© Florian Bachmeier<br><br>Unterstützt von Saal Digital und Farben Griesbeck.</p>
+            <h4 class="text-lg font-bold tracking-tight text-neutral-900 mb-3"> </h4>
+            <p class="text-sm text-neutral-600 font-light leading-relaxed">
+                Sie sind am Ende der Reise angekommen, zu der Sie Florian Bachmeier mit seinen Bildern eigeladen hat.
+Gerne können Sie einen Kommentar im Gästebuch hinterlassen oder eine Mail schicken an: <br><br>
+  </p>manus_schliersee@posteo.de<br><br>Texte: Florian Bachmeier, Mechtild Manus<br><br>Gestaltung: Elena Schmitt<br><br>Mehr über Florian Bachmeier:<br><br>www.florianbachmeier.com<br><br>© Florian Bachmeier<br><br>Unterstützt von Saal Digital und Farben Griesbeck.<br><br>  </p>
             </p>
         </div>
     </section>
@@ -247,7 +280,7 @@
     <footer class="bg-neutral-950 text-white py-12 border-t border-neutral-900">
         <div class="max-w-7xl mx-auto px-4 md:px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
-                <p class="text-sm font-extrabold tracking-wider uppercase mb-1 gallery-font">Florian Bachmeier — Leben an den Rändern</p>
+                <p class="text-sm font-extrabold tracking-wider uppercase mb-1 gallery-font">Florian Bachmeier — Ausstellungsführer</p>
                 <p class="text-[11px] text-neutral-400 font-light">Haus am Dom | © 2026</p>
             </div>
         </div>
@@ -271,6 +304,11 @@
         </div>
     </div>
 <script>
+        function scrollToSection(id) {
+            const element = document.getElementById('room-' + id);
+            if (element) { element.scrollIntoView({ behavior: 'smooth' }); }
+        }
+    
         const imageDatabase = [
             // --- UKRAINE (15 Bilder) ---
             { room: 'ukraine', src: 'bild1.png', title: 'Anhelina, Borschtschiwka, Ukraine, 2024', caption: 'Die sechsjährige Anhelina lebt bei ihrer Großmutter in Borschtschiwka. Sie ist traumatisiert vom ständigen Beschuss, leidet unter Panikattacken. 2025 gewann Florian Bachmeier damit einen World Press Photo Award. Es beeindruckte die Jury, "wie es dem Fotografen gelang, ein solch stilles Bild aufzunehmen, das gleichwohl den Betrachter veranlasst, innezuhalten und einen Aspekt des russischen Kriegs gegen die Ukraine zu bedenken, der ansonsten nicht ausreichend berücksichtigt wird." ' },
@@ -342,78 +380,70 @@
             // --- ÖSTERREICH (1 Bild) ---
             { room: 'oesterreich', src: 'bild49.jpg', title: 'Krimmler Tauernweg, Krimml,<br>Österreich, 2025', caption: 'Seit über 2000 Jahren wird der Krimmler Tauernweg als Saumweg für den Transport von Gütern genutzt. 1947 wurde er für Jüdinnen und Juden zum Fluchtweg aus Lagern für „Displaced Persons“ nach Italien. Von dort aus hofften sie, nach Israel zu gelangen, um ein neues Leben in Freiheit zu beginnen.' }
         ];
-// 1. SCROLL-FUNKTION (Original)
-    function scrollToSection(roomId) {
-        const target = document.getElementById('room-' + roomId);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
 
-    // 2. DEIN ORIGINALER CODE (100% Farbig, Original-Größen, kein Graufilter!)
-    document.addEventListener("DOMContentLoaded", () => {
-        imageDatabase.forEach((imageData, index) => {
-            const targetId = imageData.isTextOnly ? 'grid-zeitschriften' : 'grid-' + imageData.room;
-            const targetGrid = document.getElementById(targetId);
-            
-            if (targetGrid) {
-                const element = document.createElement('div');
+        document.addEventListener("DOMContentLoaded", () => {
+            imageDatabase.forEach((imageData, index) => {
+                // Bei normalen Bildern suchen wir nach 'grid-raumname', bei Zeitschriften direkt im Text-Container
+                const targetId = imageData.isTextOnly ? 'grid-zeitschriften' : 'grid-' + imageData.room;
+                const targetGrid = document.getElementById(targetId);
                 
-                if (imageData.isTextOnly) {
-                    element.className = "border-b border-neutral-200 pb-6 last:border-0";
-                    let htmlContent = '';
-                    if (imageData.hasTitle) {
-                        htmlContent += `<h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-2">${imageData.title}</h4>`;
+                if (targetGrid) {
+                    const element = document.createElement('div');
+                    
+                    if (imageData.isTextOnly) {
+                        element.className = "border-b border-neutral-200 pb-6 last:border-0";
+                        let htmlContent = '';
+                        if (imageData.hasTitle) {
+                            htmlContent += `<h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-2">${imageData.title}</h4>`;
+                        }
+                        htmlContent += `<p class="text-xs text-neutral-600 font-light !leading-[1.4]">${imageData.caption}</p>`;
+                        element.innerHTML = htmlContent;
+                    } else {
+                        element.className = "flex flex-col cursor-pointer";
+                        element.setAttribute('onclick', `openLightbox(${index})`);
+                        element.innerHTML = `
+                            <img src="${imageData.src}" alt="${imageData.title}" class="w-full h-auto object-cover rounded-sm mb-3">
+                            <h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-1">${imageData.title}</h4>
+                            <p class="text-xs text-neutral-600 font-light !leading-[1.2]">${imageData.caption}</p>
+                        `;
                     }
-                    htmlContent += `<p class="text-xs text-neutral-600 font-light !leading-[1.4]">${imageData.caption}</p>`;
-                    element.innerHTML = htmlContent;
-                } else {
-                    // GENAU WIE ES WAR:
-                    element.className = "flex flex-col cursor-pointer";
-                    element.setAttribute('onclick', `openLightbox(${index})`);
-                    element.innerHTML = `
-                        <img src="${imageData.src}" alt="${imageData.title}" class="w-full h-auto object-cover rounded-sm mb-3">
-                        <h4 class="text-sm font-extrabold tracking-wider uppercase text-neutral-900 mb-1">${imageData.title}</h4>
-                        <p class="text-sm text-neutral-600 font-neutral !leading-[1.2]">${imageData.caption}</p>
-                    `;
+                    targetGrid.appendChild(element);
                 }
-                targetGrid.appendChild(element);
-            }
+            });
         });
-    });
 
-    // 3. DEIN ORIGINALER LIGHTBOX-CODE
-    let currentImageIndex = 0;
+        let currentImageIndex = 0;
 
-    function openLightbox(index) {
-        if(imageDatabase[index].isTextOnly) return;
+        function openLightbox(index) {
+            if(imageDatabase[index].isTextOnly) return;
 
-        currentImageIndex = index;
-        const item = imageDatabase[index];
-        document.getElementById('lightbox-img').src = item.src;
-        document.getElementById('lightbox-title').innerText = item.title;
-        document.getElementById('lightbox-caption').innerText = item.caption;
-        
-        const totalImages = imageDatabase.filter(img => !img.isTextOnly).length;
-        const realIndex = imageDatabase.slice(0, index).filter(img => !img.isTextOnly).length + 1;
-        
-        document.getElementById('lightbox-counter').innerText = `${realIndex} / ${totalImages}`;
-        document.getElementById('lightbox').classList.remove('opacity-0', 'pointer-events-none');
-    }
+            currentImageIndex = index;
+            const item = imageDatabase[index];
+            document.getElementById('lightbox-img').src = item.src;
+            document.getElementById('lightbox-title').innerText = item.title;
+            document.getElementById('lightbox-caption').innerText = item.caption;
+            
+            const totalImages = imageDatabase.filter(img => !img.isTextOnly).length;
+            const realIndex = imageDatabase.slice(0, index).filter(img => !img.isTextOnly).length + 1;
+            
+            document.getElementById('lightbox-counter').innerText = `${realIndex} / ${totalImages}`;
+            document.getElementById('lightbox').classList.remove('opacity-0', 'pointer-events-none');
+        }
 
-    function closeLightbox() {
-        document.getElementById('lightbox').classList.add('opacity-0', 'pointer-events-none');
-    }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('opacity-0', 'pointer-events-none');
+        }
 
-    function navigateLightbox(direction) {
-        do {
-            currentImageIndex += direction;
-            if (currentImageIndex >= imageDatabase.length) currentImageIndex = 0;
-            if (currentImageIndex < 0) currentImageIndex = imageDatabase.length - 1;
-        } while (imageDatabase[currentImageIndex].isTextOnly);
-        
-        openLightbox(currentImageIndex);
-    }
-</script>
+        function navigateLightbox(direction) {
+            do {
+                currentImageIndex += direction;
+                if (currentImageIndex >= imageDatabase.length) currentImageIndex = 0;
+                if (currentImageIndex < 0) currentImageIndex = imageDatabase.length - 1;
+            } while (imageDatabase[currentImageIndex].isTextOnly);
+            
+            openLightbox(currentImageIndex);
+        }
+    </script>
 </body>
 </html>
+
